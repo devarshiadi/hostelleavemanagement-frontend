@@ -1,0 +1,180 @@
+/* Note: In a real app, this page would be inside an AdminLayout with a sidebar */
+.settingsPage {
+    padding: 40px;
+    background-color: var(--background-color);
+    max-width: 1400px; /* Limit width for very large screens */
+    margin: auto;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .header p {
+    font-size: 24px;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+  
+  .settingsContainer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: var(--text-white);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .cardTitle {
+    font-size: 34px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+  }
+  
+  .settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .settingItem h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .settingItem p {
+    font-size: 20px;
+    color: var(--text-light);
+    margin-top: 5px;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 25px 0;
+  }
+  
+  /* Toggle Switch Styles */
+  .toggleSwitch {
+    position: relative;
+    display: inline-block;
+    width: 105px;
+    height: 62px;
+  }
+  
+  .toggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 100px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 46px;
+    width: 46px;
+    left: 8px;
+    bottom: 8px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: -1px 4px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(43px);
+  }
+  
+  /* Admin Management Styles */
+  .adminList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .adminItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .adminInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #eee; /* Placeholder bg */
+  }
+  
+  .adminName {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .adminRole {
+    font-size: 20px;
+    color: var(--text-light);
+  }
+  
+  .menuButton {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+  
+  .addAdminButton {
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .settingsPage { padding: 20px; }
+    .header h1 { font-size: 28px; }
+    .header p { font-size: 16px; }
+    .cardTitle { font-size: 24px; }
+    .settingItem { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .settingItem h3 { font-size: 18px; }
+    .settingItem p { font-size: 14px; }
+    .adminItem { flex-direction: column; align-items: flex-start; gap: 15px; }
+  }

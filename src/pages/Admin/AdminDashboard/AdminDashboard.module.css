@@ -1,0 +1,104 @@
+.pageHeader {
+    margin-bottom: 30px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .statCard {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 30px;
+    color: var(--text-white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  .statCard:first-child {
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+  }
+  .cardContent p { font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+  .statCard:first-child .cardContent p { color: var(--text-light); }
+  .cardContent span { font-size: 48px; font-weight: 600; }
+  .statCard:first-child .cardContent span { color: var(--primary-color); }
+  
+  .activitySection {
+    background: var(--text-white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+  }
+  
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .sectionHeader h2 { font-size: 26px; color: var(--text-dark); font-weight: 600; }
+  .sectionHeader div { display: flex; gap: 10px; }
+  .actionButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .activityList {
+    display: flex;
+    flex-direction: column;
+  }
+  .activityItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .activityList .activityItem:last-child { border-bottom: none; }
+  
+  .activityUser {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .activityUser img { width: 60px; height: 60px; border-radius: 50%; }
+  .activityUser h4 { font-size: 20px; font-weight: 600; }
+  .activityUser p { color: var(--text-light); }
+  
+  .activityStatus {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .statusBadge {
+    padding: 8px 15px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    min-width: 110px;
+    text-align: center;
+  }
+  .pending { background-color: #F59E0B; }
+  .approved { background-color: #10B981; }
+  .rejected { background-color: #EF4444; }
+  .time { color: var(--text-light); }
+  
+  @media (max-width: 768px) {
+      .sectionHeader, .activityItem, .activityStatus {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+      }
+      .activityStatus { align-items: flex-start; }
+  }

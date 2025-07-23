@@ -1,0 +1,88 @@
+.container {
+    width: 100%;
+  }
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .profileHeaderCard {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--text-white);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+  .avatarSection img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .detailsSection {
+    flex-grow: 1;
+  }
+  .detailsSection h2 { font-size: 44px; color: var(--primary-color); }
+  .detailsSection p { font-size: 29px; color: var(--text-light); }
+  
+  .editButton {
+    background: #F0F2F4;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 35px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .infoCard {
+    background: var(--text-white);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .infoCard h3 {
+    font-size: 34px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .infoRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #eef0f2;
+  }
+  .infoCard .infoRow:last-child {
+    border-bottom: none;
+  }
+  .infoLabel { font-size: 22px; color: var(--text-light); }
+  .infoValue { font-size: 22px; font-weight: 500; color: var(--text-dark); }
+  
+  @media (max-width: 1200px) {
+    .infoGrid { grid-template-columns: 1fr; }
+  }
+  
+  @media (max-width: 768px) {
+    .profileHeaderCard { flex-direction: column; text-align: center; }
+    .detailsSection h2 { font-size: 32px; }
+    .detailsSection p { font-size: 22px; }
+    .infoRow { flex-direction: column; align-items: flex-start; gap: 5px; }
+  }
+  
+  @media (max-width: 576px) {
+    .pageHeader h1 { font-size: 28px; }
+    .pageHeader p { font-size: 18px; }
+  }

@@ -1,0 +1,108 @@
+.container {
+    width: 100%;
+  }
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  .backLink {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .studentInfoCard {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .studentInfoCard h2 { font-size: 32px; color: var(--primary-color); }
+  .studentInfoCard p { font-size: 24px; color: var(--text-light); margin-top: 5px; }
+  .studentInfoCard img { width: 135px; height: 135px; border-radius: 50%; }
+  
+  .detailsCard, .actionCard {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .detailsCard h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eef0f2;
+    font-size: 24px;
+  }
+  .detailsCard .detailItem:last-child { border-bottom: none; }
+  .detailItem span { color: var(--text-light); }
+  .detailItem strong { color: var(--text-dark); font-weight: 600; text-align: right; }
+  
+  .actionCard textarea {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 120px;
+    margin-bottom: 30px;
+  }
+  .actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .actionButtons button {
+    padding: 12px 40px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .approveButton { background-color: #10B981; }
+  .rejectButton { background-color: #EF4444; }
+  
+  @media (max-width: 992px) {
+    .detailItem {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .detailItem strong { text-align: left; }
+  }
+  
+  @media (max-width: 768px) {
+    .studentInfoCard { flex-direction: column-reverse; text-align: center; gap: 20px; }
+    .studentInfoCard img { width: 100px; height: 100px; }
+  }
+  
+  @media (max-width: 576px) {
+      .pageHeader h1 { font-size: 28px; }
+      .pageHeader p { font-size: 18px; }
+      .studentInfoCard h2 { font-size: 26px; }
+      .studentInfoCard p { font-size: 18px; }
+      .detailsCard h2 { font-size: 26px; }
+      .detailItem { font-size: 18px; }
+      .actionButtons { flex-direction: column; align-items: stretch; }
+  }

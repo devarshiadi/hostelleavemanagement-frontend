@@ -1,0 +1,133 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 280px;
+    background-color: var(--text-white);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;
+  }
+  
+  .sidebarHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .sidebarHeader img { height: 40px; }
+  .sidebarHeader h3 { font-size: 18px; color: var(--primary-color); }
+  
+  .sidebarNav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navLink {
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.2s;
+  }
+  .navLink:hover {
+    background-color: #eaf6ff;
+  }
+  
+  .activeLink {
+    composes: navLink;
+    background-color: var(--secondary-color);
+  }
+  
+  .logoutButton {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .mainContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+  }
+  
+  .topbar {
+    height: 70px;
+    background-color: var(--text-white);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-shrink: 0;
+  }
+  
+  .hamburger { display: none; }
+  .searchBar {
+    flex-grow: 1;
+    max-width: 400px;
+  }
+  .searchBar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+  }
+  .topbarIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .content {
+    padding: 40px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      z-index: 1000;
+      box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    }
+    .sidebarOpen {
+      transform: translateX(0);
+    }
+    .hamburger {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .topbar {
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  }

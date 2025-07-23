@@ -1,0 +1,149 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+  }
+  
+  .header {
+    height: 60px;
+    background-color: var(--text-white);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logoContainer img {
+    height: 30px;
+  }
+  
+  .logoContainer h1 {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navLink {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .activeLink {
+    composes: navLink;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .activeLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .profileContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileContainer img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobileProfile {
+    display: none;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    padding: 40px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .header {
+      padding: 0 20px;
+    }
+    .nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--text-white);
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .navOpen {
+      display: flex;
+    }
+    .navLink, .activeLink {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+    .activeLink::after {
+      display: none; /* No underline on mobile */
+    }
+    .hamburger {
+      display: block;
+    }
+    .profileContainer {
+      display: none;
+    }
+    .mobileProfile {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .mobileProfile img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    .mainContent {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+      .logoContainer h1 {
+          display: none;
+      }
+  }

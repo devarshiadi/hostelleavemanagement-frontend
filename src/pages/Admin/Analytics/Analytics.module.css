@@ -1,0 +1,108 @@
+.container {
+    width: 100%;
+  }
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .chartCard {
+    background: var(--text-white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .chartCard h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  .chartPlaceholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+  
+  .topStudentsCard {
+    background: var(--text-white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+  }
+  
+  .cardHeader {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
+  }
+  .cardHeader h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .studentList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .studentItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eef0f2;
+  }
+  .studentList .studentItem:last-child {
+    border-bottom: none;
+  }
+  
+  .studentInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .studentInfo img { width: 60px; height: 60px; border-radius: 50%; }
+  .studentInfo h4 { font-size: 20px; font-weight: 600; }
+  .studentInfo p { color: var(--text-light); }
+  
+  .leaveCount {
+    font-size: 24px;
+    color: var(--text-light);
+    font-weight: 400;
+  }
+  
+  .viewLink {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+      .studentItem {
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+      .studentInfo {
+          width: 100%;
+      }
+  }
+  @media (max-width: 576px) {
+      .pageHeader h1 { font-size: 28px; }
+      .pageHeader p { font-size: 18px; }
+      .grid { grid-template-columns: 1fr; }
+  }

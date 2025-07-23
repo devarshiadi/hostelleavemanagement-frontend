@@ -1,0 +1,5 @@
+.loginPrompt {
+    margin-top: 15px; /* Add some space above the prompt */
+    color: var(--text-light);
+    font-size: 14px;
+  }

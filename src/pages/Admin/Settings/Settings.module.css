@@ -1,0 +1,94 @@
+.settingsPage {
+    width: 100%;
+  }
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .settingsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: var(--text-white);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .cardTitle {
+    font-size: 34px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+  }
+  
+  .settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .settingItem h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .settingItem p {
+    font-size: 20px;
+    color: var(--text-light);
+    margin-top: 5px;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 25px 0;
+  }
+  
+  .toggleSwitch { position: relative; display: inline-block; width: 90px; height: 50px; }
+  .toggleSwitch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 100px; }
+  .slider:before { position: absolute; content: ""; height: 40px; width: 40px; left: 5px; bottom: 5px; background-color: white; transition: .4s; border-radius: 50%; box-shadow: -1px 4px 6px rgba(0, 0, 0, 0.25); }
+  input:checked + .slider { background-color: var(--primary-color); }
+  input:checked + .slider:before { transform: translateX(40px); }
+  
+  .adminList { display: flex; flex-direction: column; }
+  .adminItem { display: flex; justify-content: space-between; align-items: center; }
+  .adminInfo { display: flex; align-items: center; gap: 20px; }
+  .avatar { width: 75px; height: 75px; border-radius: 50%; }
+  .adminName { font-size: 24px; font-weight: 600; }
+  .adminRole { font-size: 20px; color: var(--text-light); }
+  .menuButton { background: none; border: none; font-size: 30px; cursor: pointer; color: var(--primary-color); }
+  
+  .addAdminButton {
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .settingItem h3 { font-size: 20px; }
+    .settingItem p { font-size: 16px; }
+    .adminItem { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+  
+  @media (max-width: 576px) {
+      .pageHeader h1 { font-size: 28px; }
+      .pageHeader p { font-size: 18px; }
+  }

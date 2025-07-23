@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+  }
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  .backLink {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  .pageHeader h1 { font-size: 36px; color: var(--primary-color); font-weight: 600; }
+  .pageHeader p { font-size: 24px; color: var(--text-light); }
+  
+  .studentInfoCard {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .studentInfoCard h2 { font-size: 32px; color: var(--primary-color); }
+  .studentInfoCard p { font-size: 24px; color: var(--text-light); margin-top: 5px; }
+  .studentInfoCard img { width: 135px; height: 135px; border-radius: 50%; }
+  
+  @media (max-width: 768px) {
+    .studentInfoCard { flex-direction: column-reverse; text-align: center; gap: 20px; }
+    .studentInfoCard img { width: 100px; height: 100px; }
+  }
+  
+  @media (max-width: 576px) {
+    .pageHeader h1 { font-size: 28px; }
+    .pageHeader p { font-size: 18px; }
+    .studentInfoCard h2 { font-size: 26px; }
+    .studentInfoCard p { font-size: 18px; }
+  }
